@@ -22,23 +22,23 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install Jinja2 CLI
-        run: pip install jinja2-cli
+      - name: Install dependencies
+        run: pip install jinja2
+
+      - name: Prepare dist folder
+        run: mkdir -p dist
+        
+      - name: Run HTML build script
+        run: python build.py
 
       - name: Setup Typst
         uses: typst-community/setup-typst@v5
 
-      - name: Prepare dist folder
-        run: mkdir -p dist
-
-      - name: Render HTML
-        run: jinja2 index.html.j2 resume.json > dist/index.html
-
-      - name: Render PDF
+      - name: Render PDF via Typst
         run: typst compile resume.typ dist/resume.pdf
 
       - name: Copy favicon
-        run: cp favicon.png dist/favicon.png
+        run: cp favicon.png dist/favicon.png || true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
