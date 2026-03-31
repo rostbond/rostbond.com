@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "theme": "professional",
+    "themeOptions": {
+      "colors": {
+        "background": [ "#FAFAFA", "#1F2430" ],
+        "dimmed": [ "#F0F0F0", "#242936" ],
+        "primary": [ "#5C6773", "#CBCCC6" ],
+        "secondary": [ "#ABB0B6", "#707A8C" ],
+        "accent": [ "#F29718", "#FFCC66" ]
+      }
+    },
+    "lastModified": "2026-03-30T00:00:00.000Z"
+  },
+  "basics": {
+    "name": "Rostyslav Bondarchuk",
+    "label": "Senior QA Engineer",
+    "email": "me@rostbond.com",
+    "phone": "+34 654 50 80 25",
+    "website": "https://rostbond.com",
+    "url": "https://rostbond.com",
+    "summary": [
+      "Senior QA Engineer with 20+ years of experience delivering high-quality software in complex, distributed systems. Specialized in test automation, CI/CD integration, and quality strategy across microservices architectures.",
+      "Transformed QA processes by reducing regression time from 3 days to 30 minutes using scalable Playwright automation.",
+      "Strong expertise in API testing, Python-based tooling, and Salesforce ecosystems. Experienced in leading QA initiatives, improving test coverage, and enabling faster, more reliable releases.",
+      "Experienced in end-to-end testing, API validation, and quality ownership across the full software delivery lifecycle.",
+      "Passionate about DevOps practices, infrastructure as code (Ansible), and building production-like environments using containerization and homelabs.",
+      "Core skills: Test Automation, CI/CD, API Testing, Microservices Testing, SDET, Integration Testing."
+    ],
+    "location": { "city": "Malaga", "countryCode": "ES" },
+    "profiles": [
+      {
+        "username": "rostbond",
+        "url": "https://github.com/rostbond",
+        "network": "github"
+      },
+      {
+        "username": "rostbond",
+        "url": "https://www.linkedin.com/in/rostbond",
+        "network": "linkedin"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Intellias",
+      "position": "Senior QA Engineer",
+      "url": "https://intellias.com",
+      "startDate": "2024-11-11",
+      "summary": "Quality Assurance",
+      "highlights": [
+        "Reduced regression testing time from 3 days of manual testing to 30 minutes using a scalable Playwright-based E2E automation framework.",
+        "Improved deployment reliability by introducing static validation of SOQL queries, preventing production defects and data inconsistencies.",
+        "Identified and automated high-risk approval rule scenarios, significantly increasing test coverage and team velocity.",
+        "Contributed to QA strategy and automation roadmap, aligning testing efforts with CI/CD pipelines and release goals.",
+        "Assisted development teams in reproducing environment-specific bugs within the staging pipeline."
+      ]
+    },
+    {
+      "name": "SOC Prime",
+      "position": "Senior QA Engineer",
+      "url": "https://socprime.com",
+      "startDate": "2022-01-24",
+      "endDate": "2024-08-01",
+      "summary": "Quality Assurance",
+      "highlights": [
+        "Validated functionality and integration of a microservices-based system, ensuring stability across distributed components.",
+        "Automated routine QA workflows using a Python-based CLI tool integrating with REST APIs, reducing manual effort by 80% and improving consistency.",
+        "Implemented continuous health monitoring using Python and GitLab CI, reducing incident detection time and improving system reliability."
+      ]
+    },
+    {
+      "name": "Avenga",
+      "position": "QA Lead",
+      "url": "https://avenga.com",
+      "startDate": "2011-08-01",
+      "endDate": "2022-01-21",
+      "summary": "Quality Assurance",
+      "highlights": [
+        "Led QA efforts across multiple teams in a large-scale project, contributing to 33% of total test execution with a lean team of 2 engineers.",
+        "Mentored QA engineers and improved testing processes, introducing better test design practices and increasing overall team efficiency.",
+        "Developed comprehensive Salesforce administration courses tailored for  QA professionals."
+      ]
+    },
+    {
+      "name": "Interlink",
+      "position": "Senior QA Engineer",
+      "url": "https://interlink.com",
+      "startDate": "2006-12-01",
+      "endDate": "2011-07-29",
+      "summary": "Quality Assurance",
+      "highlights": [
+        "Analyzed business requirements and wrote test cases, test conditions, test plans, and test reports.",
+        "Estimated, planned, and coordinated testing activities, ensuring that quality issues and defects are correctly identified, documented, tracked, and resolved.",
+        "Conducted technical interviews, contributing to team growth and talent acquisition."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Test Automation",
+      "level": "Intermediate",
+      "keywords": [
+        "Playwright",
+        "E2E Testing",
+        "API Testing",
+        "Test Automation Frameworks"
+      ]
+    },
+    {
+      "name": "DevOps & Infrastructure",
+      "level": "Intermediate",
+      "keywords": [
+        "Ansible",
+        "Podman (Rootless, Quadlets)",
+        "Proxmox",
+        "IaC",
+        "CI/CD",
+        "Environment Management"
+      ]
+    },
+    {
+      "name": "Testing",
+      "level": "Advanced",
+      "keywords": [
+        "Manual Testing",
+        "Test Planning",
+        "Regression Testing",
+        "Quality Assurance Strategy"
+      ]
+    },
+    {
+      "name": "Self-hosting & Tools",
+      "level": "Intermediate",
+      "keywords": [
+        "Caddy",
+        "Vaultwarden",
+        "Immich",
+        "Linux (Debian/Ubuntu)"
+      ]
+    },
+    {
+      "name": "Testing Tools",
+      "level": "Advanced",
+      "keywords": [
+        "JIRA",
+        "Confluence",
+        "Bugzilla",
+        "TestLink",
+        "TestRail",
+        "Postman",
+        "Azure DevOps"
+      ]
+    },
+    {
+      "name": "Programming & Scripting",
+      "level": "Intermediate",
+      "keywords": [
+        "Python",
+        "REST API",
+        "gRPC",
+        "SQL",
+        "SOQL",
+        "Apex",
+        "Bash",
+        "Typescript"
+      ]
+    },
+    {
+      "name": "Version Control & CI/CD",
+      "level": "Intermediate",
+      "keywords": [
+        "git",
+        "GitHub",
+        "GitHub Actions",
+        "GitLab",
+        "GitLab CI"
+      ]
+    },
+    {
+      "name": "Methodologies",
+      "level": "Expert",
+      "keywords": [
+        "Scrum",
+        "Agile"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "HomeLab Automation",
+      "description": "Full Proxmox homelab automation using Ansible and Podman Quadlets.",
+      "url": "https://github.com/rostbond/infrastructure-as-code",
+      "highlights": [
+        "Technologies: Ansible, Podman, Proxmox, Caddy",
+        "Automated deploy of 10+ services (Immich, AdGuard, Paperless-NGX, FreshRSS, etc.).",
+        "Implemented reverse proxy using Caddy with automated SSL."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Cherkassy State University, Ukraine",
+      "area": "Computer Science",
+      "studyType": "Master of Science",
+      "startDate": "2001-09-01",
+      "endDate": "2006-06-30"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "ISTQB Certified Test Analyst",
+      "date": "2022-01-01",
+      "url": "https://isqi.org/",
+      "issuer": "iSQI"
+    },
+    {
+      "name": "ISTQB Certified Test Manager",
+      "date": "2018-01-01",
+      "url": "https://isqi.org/",
+      "issuer": "iSQI"
+    },
+    {
+      "name": "ISTQB Certified Tester",
+      "date": "2012-01-01",
+      "url": "https://isqi.org/",
+      "issuer": "iSQI"
+    },
+    {
+      "name": "Salesforce Certified Platform Administrator",
+      "date": "2019-12-23",
+      "url": "https://trailhead.salesforce.com/en/credentials/verification/",
+      "issuer": "Salesforce"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Russian",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Professional Working Proficiency"
+    },
+    {
+      "language": "Ukrainian",
+      "fluency": "Native"
+    }
+  ]
+}

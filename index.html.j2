@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Rostyslav Bondarchuk | Senior QA Engineer</title>
+    <style>
+        :root {
+            --bg: #1F2430;
+            --fg: #CBCCC6;
+            --accent: #FFCC66;
+            --headers: #95E6CB;
+            --dimmed: #707A8C;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        #tsparticles {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            top: 0;
+            left: 0;
+        }
+
+        .terminal-container {
+            position: relative;
+            z-index: 2;
+            padding: 2rem 1rem;
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            border: 1px dashed var(--dimmed);
+            padding: 1.5rem;
+            background: rgba(31, 36, 48, 0.7);
+            backdrop-filter: blur(2px);
+        }
+
+        .name {
+            font-size: clamp(1.5rem, 5vw, 2.2rem);
+            font-weight: bold;
+            color: var(--accent);
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        .label {
+            color: var(--headers);
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            margin-bottom: 1rem;
+        }
+
+        .contacts {
+            font-size: 0.9rem;
+            color: var(--dimmed);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .contacts a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: 0.3s;
+        }
+
+        .contacts a:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+            background: rgba(31, 36, 48, 0.4);
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--headers);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+
+            border-bottom: 1px dashed var(--dimmed); 
+            padding-bottom: 8px;
+            width: 100%;
+        }
+
+        .section-content {
+            line-height: 1.7;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        li::before {
+            content: "→";
+            color: var(--accent);
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .job-entry {
+            margin-bottom: 2rem;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .job-meta {
+            color: var(--dimmed);
+            font-size: 0.85rem;
+        }
+
+        .skill-item {
+            margin-bottom: 8px;
+        }
+
+        .skill-name {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .terminal-container {
+                padding: 1rem 0.5rem;
+            }
+            section {
+                padding: 10px;
+            }
+        }
+
+        .download-btn {
+            position: fixed;
+            top: 30px;
+            left: 50%; 
+            margin-left: 320px; 
+            
+            z-index: 1000;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border: 1px solid var(--headers);
+            color: var(--headers);
+            background: var(--bg);
+            text-decoration: none;
+            font-size: 0.8rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        .download-btn:hover {
+            background: var(--headers);
+            color: var(--bg);
+            box-shadow: 0 0 20px rgba(149, 230, 203, 0.4);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 1100px) {
+            .download-btn {
+                left: auto;
+                right: 30px;
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .download-btn {
+                top: auto;
+                bottom: 25px;
+                right: 20px;
+            }
+            .download-btn span { display: none; }
+        }
+
+        @media print {
+            .download-btn { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div id="tsparticles"></div>
+
+    <div class="terminal-container">
+        <header class="header">
+            <div class="name">ROSTYSLAV BONDARCHUK</div>
+            <div class="label">Senior QA Engineer</div>
+            <div class="contacts">
+                <a href="mailto:me@rostbond.com">me@rostbond.com</a> | 
+                <a href="https://www.linkedin.com/in/rostbond" target="_blank">linkedin</a> | 
+                <a href="https://github.com/rostbond" target="_blank">github</a> |
+                <span>Malaga, ES</span>
+            </div>
+        </header>
+
+        <main id="resume-content"></main>
+        
+        <div style="height: 2rem;"></div> 
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+
+    <script>
+        const resumeData = {{ resume_json | indent(8) | safe }};
+
+        const container = document.getElementById('resume-content');
+
+        const createSection = (title, content) => `
+            <section>
+                <div class="section-header">${title}</div>
+                <div class="section-content">${content}</div>
+            </section>
+        `;
+
+        let html = "";
+
+        // Summary
+        html += createSection("Summary", 
+            `<div style="white-space: pre-wrap;">${resumeData.basics.summary.join('\n\n')}</div>`
+        );
+
+        // Experience
+        let expHtml = "";
+        resumeData.work.forEach(job => {
+            const end = job.endDate ? job.endDate : "Present";
+
+            expHtml += `
+                <div class="job-entry">
+                    <div class="job-header">
+                        <div class="job-title">${job.position} @ ${job.name}</div>
+                        <div class="job-meta">${job.startDate} — ${end}</div>
+                    </div>
+                    <ul>${job.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
+                </div>
+            `;
+        });
+        html += createSection("Experience", expHtml);
+
+        // Skills
+        let skillsHtml = "";
+        resumeData.skills.forEach(s => {
+            skillsHtml += `
+                <div class="skill-item">
+                    <span class="skill-name">${s.name}:</span> 
+                    <span style="opacity: 0.9;">${s.keywords.join(', ')}</span>
+                </div>
+            `;
+        });
+        html += createSection("Technical Skills", skillsHtml);
+
+        // Projects
+        let projHtml = "";
+        resumeData.projects.forEach(p => {
+            projHtml += `
+                <div class="job-entry">
+                    <div class="job-header">
+                        <div class="job-title">${p.name}</div>
+                        <div class="job-meta"><a href="${p.url}" target="_blank" style="color: var(--dimmed)">view source</a></div>
+                    </div>
+                    <ul>${p.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
+                </div>
+            `;
+        });
+        html += createSection("Projects", projHtml);
+
+        // Education
+        let eduHtml = "";
+        resumeData.education.forEach(edu => {
+            const end = edu.endDate ? edu.endDate : "Present";
+            eduHtml += `
+                <div class="job-entry">
+                    <div class="job-header">
+                        <div class="job-title">${edu.studyType} in ${edu.area}</div>
+                        <div class="job-meta">${edu.startDate} — ${end}</div>
+                    </div>
+                    <div style="opacity: 0.8;">${edu.institution}</div>
+                </div>
+            `;
+        });
+        html += createSection("Education", eduHtml);
+
+        // Certificates
+        let certHtml = "";
+        resumeData.certificates.forEach(cert => {
+            certHtml += `
+                <div class="job-entry" style="margin-bottom: 1rem;">
+                    <div class="job-header">
+                        <div class="job-title">${cert.name}</div>
+                        <div class="job-meta">${cert.date}</div>
+                    </div>
+                    <div style="font-size: 0.85rem; opacity: 0.7;">Issuer: ${cert.issuer}</div>
+                </div>
+            `;
+        });
+        html += createSection("Certifications", certHtml);
+
+        // Languages
+        let langHtml = "";
+        resumeData.languages.forEach(lang => {
+            langHtml += `
+                <div class="skill-item">
+                    <span class="skill-name">${lang.language}:</span> 
+                    <span style="opacity: 0.9;">${lang.fluency}</span>
+                </div>
+            `;
+        });
+        html += createSection("Languages", langHtml);
+
+        container.innerHTML = html;
+
+        container.innerHTML = html;
+
+        tsParticles.load("tsparticles", {
+            fpsLimit: 60,
+            particles: {
+                number: { value: 30, density: { enable: true, area: 800 } },
+                color: { value: "#FFCC66" },
+                shape: { type: "circle" },
+                opacity: { value: 0.3, random: true },
+                size: { value: { min: 1, max: 2 } },
+                move: {
+                    enable: true,
+                    speed: 0.3,
+                    direction: "none",
+                    outModes: { default: "out" },
+                }
+            },
+            detectRetina: true,
+        });
+    </script>
+
+    <a href="resume.pdf" download="Rostyslav_Bondarchuk_QA_Senior.pdf" class="download-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+        </svg>
+        <span>GET_PDF (v1.0)</span>
+    </a>
+</body>
+</html>
