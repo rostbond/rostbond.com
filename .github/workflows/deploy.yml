@@ -40,6 +40,9 @@ jobs:
       - name: Copy favicon
         run: cp favicon.png dist/favicon.png || true
 
+      - name: Create CNAME
+        run: echo "rostbond.com" > dist/CNAME
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
