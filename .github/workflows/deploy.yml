@@ -26,7 +26,7 @@ jobs:
         run: pip install jinja2-cli
 
       - name: Setup Typst
-        uses: chataigne/setup-typst@v1
+        uses: typst-community/setup-typst@v5
 
       - name: Prepare dist folder
         run: mkdir -p dist
