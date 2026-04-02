@@ -1,6 +1,7 @@
 #import "@preview/simple-technical-resume:0.1.1": *
 
 #let data = json("resume.json")
+#let spacing = 0.1em
 
 // YYYY-MM-DD => MMM YYYY
 #let parse-date(date) = {
@@ -17,7 +18,6 @@
   ).display("[month repr:short] [year]")
 }
 
-#set page(paper: "us-letter", margin: (x: 1.27cm, y: 1.27cm))
 #set list(indent: 0.4em)
 
 #show: resume.with(
@@ -30,41 +30,47 @@
   location: data.basics.location.city + ", " + data.basics.location.countryCode,
   phone: data.basics.phone,
   email: data.basics.email,
-  website: data.basics.website,
   linkedin-user-id: data.basics.profiles.at(0).username,
   github-username: data.basics.profiles.at(0).username,
+  paper: "us-letter",
+  top-margin: 0.75in,
+  right-margin: 0.75in,
+  left-margin: 0.75in,
+  bottom-margin: 0.75in
 )
 
 #align(center)[
   #text(size: 11pt, weight: "semibold")[#data.basics.label]
 ]
 
-#custom-title("Summary", spacing-between: 0.8em)[
-  #data.basics.summary.join([#v(0.4em)])
+
+#custom-title("Summary", spacing-between: spacing)[
+  #data.basics.summary.join([#v(0.3em)])
 ]
 
-#custom-title("Experience", spacing-between: 0.8em)[
+#custom-title("Experience", spacing-between: spacing)[
   #for job in data.work [
-    #let start = parse-date(job.startDate)
-    #let end = parse-date(job.at("endDate", default: "Present"))
-    
-    *#job.position* | #start - #end \
-    #job.name #text(style: "italic")[#job.at("location", default: "")]
-    
-    #for highlight in job.highlights [
-      - #highlight
+    #block(breakable: false, width: 100%)[
+      #let start = parse-date(job.startDate)
+      #let end = parse-date(job.at("endDate", default: "Present"))
+      
+      *#job.position* | #job.name | #start - #end \
+      
+      #for highlight in job.highlights [
+        - #highlight
+      ]
     ]
-    #v(0.4em)
+    #v(0.3em)
   ]
 ]
 
-#custom-title("Skills", spacing-between: 0.8em)[
+#custom-title("Skills", spacing-between: spacing)[
     #for skill in data.skills [
       *#skill.name*: #skill.keywords.join(", ") \
     ]
 ]
 
-#custom-title("Projects", spacing-between: 0.8em)[
+#custom-title("Projects", spacing-between: spacing)[
   #for project in data.projects [
     #project-heading(project.name, project-url: project.url,)[
       #for highlight in project.highlights [
@@ -74,7 +80,7 @@
   ]
 ]
 
-#custom-title("Education", spacing-between: 0.8em)[
+#custom-title("Education", spacing-between: spacing)[
   #for edu in data.education [
     #let start = parse-date(edu.startDate)
     #let end = parse-date(edu.at("endDate", default: none))
@@ -85,13 +91,13 @@
   ]
 ]
 
-#custom-title("Certifications", spacing-between: 0.8em)[
+#custom-title("Certifications", spacing-between: spacing)[
   #for certificate in data.certificates [
     *#certificate.name* | #parse-date(certificate.date) \
   ]
 ]
 
-#custom-title("Languages", spacing-between: 0.8em)[
+#custom-title("Languages", spacing-between: spacing)[
   #for language in data.languages [
     *#language.language*: #language.fluency \
   ]
